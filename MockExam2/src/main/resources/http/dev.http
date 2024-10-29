@@ -1,0 +1,40 @@
+### Get all doctors
+GET {{url}}/doctors
+Accept: application/json
+
+### Get a doctor by ID
+GET {{url}}/doctors/1
+Accept: application/json
+
+### Get doctors by speciality
+GET {{url}}/doctor/speciality/SURGERY
+Accept: application/json
+
+### Get doctors by birthdate range
+GET {{url}}/doctor/birthdate/range?from=1980-01-01&to=1990-12-31
+Accept: application/json
+
+### Create a new doctor
+POST {{url}}/doctors
+Content-Type: application/json
+
+{
+  "name": "Alice Brown",
+  "dateOfBirth": "1992-04-15",
+  "yearOfGraduation": 2018,
+  "nameOfClinic": "New Hope Clinic",
+  "speciality": "DERMATOLOGY"
+}
+
+### Update a doctor
+PUT http://localhost:7070/api/doctors/1
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "dateOfBirth": "1980-01-01",
+  "yearOfGraduation": 2005,
+  "nameOfClinic": "Updated City Clinic",
+  "speciality": "CARDIOLOGY"
+}
+
